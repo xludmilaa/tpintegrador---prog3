@@ -1,7 +1,5 @@
 import bcrypt from 'bcryptjs';
 
-//---Función para encriptar la contraseña
-
 async function encriptarContrasenia(contrasenia) {
   const hashedPassword = await bcrypt.hash(contrasenia, 10);
   console.log('Contraseña original:', contrasenia);
@@ -9,11 +7,7 @@ async function encriptarContrasenia(contrasenia) {
   return hashedPassword;
 }
 
-//---Usa una nueva contraseña en texto plano
-
-const nuevaContrasenia = 'daetar';
-
-//---Llama a la función con la nueva contraseña
+const nuevaContrasenia = 'cont';
 
 encriptarContrasenia(nuevaContrasenia)
   .then(hashedPassword => {
